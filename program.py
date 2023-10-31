@@ -124,7 +124,55 @@ for item in mars_temperature.split():
     if item.isnumeric():
         print(item)
 
-        print("-60".startswith('-')) '''
+        print("-60".startswith('-')) 
 
-if "30 C".endswith("C"):
-        print("This temperature is in Celsius")
+    if "30 C".endswith("C"):
+        print("This temperature is in Celsius") 
+
+
+print("Saturn has a daytime temperature of -170 degrees Celsius, while Mars has -28 Celsius.".replace("Celsius", "C")) 
+
+text = "Temperatures on the Moon can vary wildly."
+print("temperatures" in text)
+
+text = "Temperatures on the Moon can vary wildly."
+print("temperatures" in text.lower())
+
+moon_facts = ["The Moon is drifting away from the Earth.", "On average, the Moon is moving about 4cm every year."]
+print(' '.join(moon_facts))
+
+
+text = """Interesting facts about the Moon. The Moon is Earth's only satellite. There are several interesting facts about the Moon and how it affects life here on Earth. On average, the Moon moves 4cm away from the Earth every year. This yearly drift is not significant enough to cause immediate effects on Earth. The highest daylight temperature of the Moon is 127 C."""
+sentences = text.split('. ')
+
+for sentence in sentences:
+    if 'temperature' in sentence:
+        print(sentence) 
+
+mass_percentage = "1/6"
+print("On the Moon, you would weigh about %s of your weight on Earth." % mass_percentage) 
+
+print("""Both sides of the %s get the same amount of sunlight, but only one side is seen from %s because the %s rotates around its own axis when it orbits %s.""" % ("Moon", "Earth", "Moon", "Earth")) 
+
+mass_percentage = "1/6"
+print("On the Moon, you would weigh about {} of your weight on Earth.".format(mass_percentage))	
+
+mass_percentage = "1/6"
+print("""You are lighter on the {0}, because on the {0} you would weigh about {1} of your weight on Earth.""".format("Moon", mass_percentage))
+
+
+print(f"On the Moon, you would weigh about {mass_percentage} of your weight on Earth.") 
+
+print(round(100/6, 1))
+
+print(f"On the Moon, you would weigh about {round(100/6, 1)}% of your weight on Earth.")
+
+subject = "interesting facts about the moon"
+heading = f"{subject.title()}"
+print(heading)   '''
+
+template = """Gravity Facts about {name}
+----------------------------------------
+Planet Name: {planet}
+Gravity on {Ganymede}: {gravity} m/s2"""
+print(template.format(name=name, planet=planet, gravity=gravity))
